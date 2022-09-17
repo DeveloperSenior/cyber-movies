@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CyberMovies"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="CyberMovies.Views.PokemonPage"
+             Title="Pokemones"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Refresh Pokemons"
+                     Clicked="OnGetPokemonToolbarItemClicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                                 Orientation="Vertical">
+        <local:EnumPicker ios:Picker.UpdateMode="WhenFinished"
+                          EnumType="{x:Type local:AvailablePokemon}"
+                          Title="Seleccione pokemon"
+                          SelectedIndexChanged="OnPickerSelectionChanged" />
+        <ListView x:Name="listView" 
+              Margin="20" 
+              ItemSelected="OnItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 Orientation="Horizontal">
+
+                            <Label Text="{Binding name}" 
+                               VerticalTextAlignment="Center" />
+
+                        <Image Source="{Binding sprites.other.official_artwork.front_default}"   />
+                        
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+   </StackLayout>
+</ContentPage>

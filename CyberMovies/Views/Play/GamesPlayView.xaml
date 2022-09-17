@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberMovies.Views.GamesPlayView"
+             Title="TOP DE JUEGOS">
+    <ContentPage.Content>
+        <ScrollView >
+        <StackLayout>
+
+            <Label Text="CRASH" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="https://i.linio.com/p/7eaed1aaa8b8b600b7af369ff6c31f77-product.webp"></Image>
+            <Label Text="Juego Crash Bandicoot 4 It's About Time PS4 Nuevo Fisico Español" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  FontSize="Small"></Label>
+            <Label Text="PRECIO: $179.000" TextColor="Red"  HorizontalOptions="CenterAndExpand"></Label>
+
+            <Label Text="GTA 5" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="https://i.linio.com/p/c13453531e2d4b8495065e132a070b4f-product.webp"></Image>
+            <Label Text="PS4 Juego GTA Five GRAND THEFT AUTO Cinco 5" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  FontSize="Small"></Label>
+                <Label Text="PRECIO: $109.990" TextColor="Red" HorizontalOptions="CenterAndExpand"></Label>
+
+            <Label Text="HORIZON" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="https://i.linio.com/p/44f701869f51e585f5a2e7d8351ffb50-product.webp"></Image>
+            <Label Text="Horizon Forbidden West Ps4 Juego PlayStation 4" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  FontSize="Small"></Label>
+                <Label Text="PRECIO: $249.900" TextColor="Red" HorizontalOptions="CenterAndExpand"></Label>
+
+            <Label Text="THE LAST OF US" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="https://i.linio.com/p/1a110b03d64d5bcae5be0531102a5c12-product.webp"></Image>
+            <Label Text="The Last of Us - PlayStation 3" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  FontSize="Small"></Label>
+                <Label Text="PRECIO: $61.990" TextColor="Red" HorizontalOptions="CenterAndExpand"></Label>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

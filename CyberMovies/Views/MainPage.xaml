@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:CyberMovies.Views"
+             x:Class="CyberMovies.Views.MainPage"
+             mc:Ignorable="d"
+             Title="Peliculas"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Tema"
+                 Command="{Binding NavigateCommand}"
+                 CommandParameter="{x:Type views:ThemeSelectionPage}"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout
+                                 HorizontalOptions="CenterAndExpand"
+                                 Orientation="Vertical">
+            <Button Text="VER PELICULAS" 
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                CornerRadius="10"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type views:CarouselPage}">
+        </Button>
+
+        <Button Text="JUEGOS DE PLAY"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                CornerRadius="10"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type views:GamesPlayView}">
+        </Button>
+
+        <Button Text="CATALOGO DE SMARTPHONES"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                CornerRadius="10"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type views:SmartphoneView}">
+        </Button>
+            <Button Text="VER POKEMONES" 
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                CornerRadius="10"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type views:PokemonPage}">
+        </Button>
+
+   </StackLayout>
+
+
+</ContentPage>
